@@ -1,6 +1,7 @@
 from sklearn.datasets import load_wine
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn import metrics
 
 data=load_wine()
 
@@ -22,3 +23,4 @@ preds = classifier_knn.predict(sample)
 for p in preds:
     pred_species=response_vector[p]
 print(pred_species)
+print("Accuracy:",metrics.accuracy_score(y_test,y_pred))
