@@ -18,9 +18,11 @@ y_pred = classifier_knn.predict(X_test)
 sample =X[0:25]
 sample.reshape(1, -1)
 print(sample)
+print(y)
 preds = classifier_knn.predict(sample)
+pred_species=list()
 for p in preds:
-    pred_species=response_vector[p]
+    pred_species.append(response_vector[p])
 print(pred_species)
 print(feature_name)
 print(response_vector)
